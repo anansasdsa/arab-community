@@ -211,7 +211,7 @@ const secreT = [
 });
 client.on('message', message => {
     if(message.channel.type === "dm") return;
-      if(message.content.startsWith ("!زواج")) {
+      if(message.content.startsWith ("-^زواج")) {
       if(!message.channel.guild) return message.reply(' This command only for servers ')
       var proposed = message.mentions.members.first()
 
@@ -229,6 +229,7 @@ message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
 .then(collected =>{ 
     message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
 })
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
 
    const filte = m => m.content.startsWith("لا");
 message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
@@ -241,7 +242,6 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
   }
 });
-
 
 client.on("message", message => {
  if (message.content === "!help^") {
