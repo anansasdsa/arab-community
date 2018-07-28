@@ -1258,7 +1258,8 @@ const secre = [
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
-:crown:اسم العضو  ${member}:crown:  
+:crown:${member}:crown:
+.setImage('https://www.askideas.com/media/13/Beautiful-Wooden-Welcome-Sign.jpg
 انت العضو رقم ${member.guild.memberCount} `) 
 }).catch(console.error)
 });
