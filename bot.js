@@ -1,6 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const bot = require('discord.js-musicbot-addon');//Elmusaui_GK + Narox
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
 bot.start(client, {//Elmusaui_GK + Narox
  youtubeKey: "AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8", //Elmusaui_GK + Narox
  musichelp : "*help-music", //Elmusaui_GK + Narox
